@@ -1,0 +1,24 @@
+<mvc:View controllerName="library.library.controller.SplitContainer" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<SplitContainer id="SplitContDemo" initialDetail="detail" initialMaster="master">
+		<detailPages>
+			<Page id="booksTable" title="{i18n>books}" backgroundDesign="Solid" showNavButton="{= !${device>/system/desktop} }"
+				navButtonText="Back" navButtonPress=".onPressDetailBack" class="sapUiStdPage">
+				<mvc:XMLView viewName="library.library.view.BooksSmartTable"/>
+			</Page>
+			<Page id="checkoutsTable" title="{i18n>checkouts}" backgroundDesign="Solid" class="sapUiStdPage" showNavButton="true" navButtonText="Back"
+				navButtonPress=".onPressDetailBack">
+				<mvc:XMLView viewName="library.library.view.CheckoutsSmartTable"/>
+			</Page>
+		</detailPages>
+		<masterPages>
+			<Page id="master2" title="{i18n>library}" backgroundDesign="List" icon="sap-icon://action" class="sapUiStdPage" showNavButton="false"
+				navButtonPress=".onPressMasterBack">
+				<List itemPress=".onListItemPress">
+					<StandardListItem title="{i18n>books}" type="Active" custom:to="booksTable"/>
+					<StandardListItem title="{i18n>checkouts}" type="Active" custom:to="checkoutsTable"/>
+				</List>
+			</Page>
+		</masterPages>
+	</SplitContainer>
+</mvc:View>

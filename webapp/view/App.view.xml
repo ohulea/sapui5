@@ -1,0 +1,7 @@
+<mvc:View controllerName="library.library.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<mvc:XMLView viewName="library.library.view.SplitContainer"/>
+		</App>
+	</Shell>
+</mvc:View>

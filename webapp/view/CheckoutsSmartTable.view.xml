@@ -1,0 +1,26 @@
+<mvc:View xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="library.library.controller.CheckoutsSmartTable" height="100%">
+	<Page id="booksPage" navButtonPress="onNavBack" showNavButton="false">
+		<content>
+			<smartTable:SmartTable id="checkoutsSmartTable" entitySet="Checkouts" tableType="ResponsiveTable" smartFilterId="smartFilterBar"
+				placeToolbarInTable="true" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false" useTablePersonalisation="true"
+				header="Line Items" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored" enableAutoBinding="true" demandPopin="true"
+				class="sapUiResponsiveContentPadding sapUiSizeCompact"
+				initiallyVisibleFields="ISBN,Author,Title,Firstname,Lastname,Checkoutd,Returnd">
+				<smartTable:layoutData>
+					<FlexItemData growFactor="1"/>
+				</smartTable:layoutData>
+				<!--<Table mode="SingleSelectLeft"></Table>-->
+			</smartTable:SmartTable>
+		</content>
+		<!--<footer>-->
+		<!--	<OverflowToolbar id="otbFooter">-->
+		<!--		<ToolbarSpacer/>-->
+				<!--<OverflowToolbarButton text="Add" icon="sap-icon://add" press="onAddRow" tooltip="Add new record"/>-->
+				<!--<OverflowToolbarButton text="Edit" icon="sap-icon://edit" press="onEditRow" tooltip="Edit record"/>-->
+				<!--<OverflowToolbarButton text="Delete" icon="sap-icon://delete" press="onDeleteRow" tooltip="Delete record"/>-->
+		<!--	</OverflowToolbar>-->
+		<!--</footer>-->
+	</Page>
+</mvc:View>
