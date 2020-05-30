@@ -1,0 +1,7 @@
+<mvc:View controllerName="library2.library2.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<mvc:XMLView viewName="library2.library2.view.BooksSmartTable"/>
+		</App>
+	</Shell>
+</mvc:View>
